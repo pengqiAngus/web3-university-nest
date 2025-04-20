@@ -1,0 +1,15 @@
+{
+  "version": "2.0",
+  "routeKey": "ANY /test",
+  "rawPath": "/test",
+  "rawQueryString": "",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "requestContext": {
+    "http": {
+      "method": "GET",
+      "path": "/test"
+    }
+  }
+}

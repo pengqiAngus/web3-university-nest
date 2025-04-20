@@ -1,0 +1,1 @@
+{"errorType": "TypeError", "errorMessage": "(0 , express_1.default) is not a function", "trace": ["TypeError: (0 , express_1.default) is not a function", "    at bootstrap (/var/src/lambda.ts:12:31)", "    at Runtime.handler (/var/src/lambda.ts:28:24)", "    at Runtime.handleOnceNonStreaming (file:///var/runtime/index.mjs:1173:29)"]}

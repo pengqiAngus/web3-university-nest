@@ -11,7 +11,9 @@ pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-
+.env
+.env.development
+.env.production
 # OS
 .DS_Store
 /layer

@@ -1,6 +1,6 @@
 // src/lambda.ts
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+import { AppModule } from './modules/app/app.module';
 import { ExpressAdapter } from '@nestjs/platform-express';
 import * as express from 'express';
 import { configure as serverlessExpress } from '@vendia/serverless-express';
@@ -14,6 +14,7 @@ async function bootstrap() {
       AppModule,
       new ExpressAdapter(expressApp),
     );
+    app.setGlobalPrefix('api');
 
     // 启用 CORS
     app.enableCors();

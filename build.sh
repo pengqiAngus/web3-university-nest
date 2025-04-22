@@ -32,10 +32,13 @@ echo "📦 Setting up Lambda layer..."
 cat > layer/nodejs/package.json << EOF
 {
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.787.0",
+    "@aws-sdk/s3-request-presigner": "^3.787.0",
     "@nestjs/common": "^11.0.1",
     "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
+    "@nestjs/swagger": "^11.1.5",
     "@nestjs/typeorm": "^11.0.0",
     "@vendia/serverless-express": "^4.12.6",
     "class-transformer": "^0.5.1",
@@ -45,7 +48,9 @@ cat > layer/nodejs/package.json << EOF
     "pg": "^8.14.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
-    "typeorm": "^0.3.22"
+    "swagger-ui-express": "^5.0.1",
+    "typeorm": "^0.3.22",
+    "uuid": "^11.1.0"
   }
 }
 EOF

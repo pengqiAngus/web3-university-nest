@@ -11,11 +11,11 @@ export class UploadService {
 
   constructor(private configService: ConfigService) {
     this.s3Client = new S3Client({
-      region: this.configService.get('AWS_REGION'),
+      region: this.configService.get('AWS_IAM_REGION'),
       credentials: {
-        accessKeyId: this.configService.get('AWS_ACCESS_KEY_ID') as string,
+        accessKeyId: this.configService.get('AWS_IAM_KEY_ID') as string,
         secretAccessKey: this.configService.get(
-          'AWS_SECRET_ACCESS_KEY',
+          'AWS_IAM_SECRET_ACCESS_KEY',
         ) as string,
       },
     });

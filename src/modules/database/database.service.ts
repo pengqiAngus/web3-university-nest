@@ -12,7 +12,7 @@ export class DatabaseService {
       port: Number(process.env.DB_PORT) || 5432,
       user: process.env.DB_USERNAME || 'postgres',
       password: process.env.DB_PASSWORD || 'postgres',
-      database: 'postgres', // 初始连接到默认数据库
+      database: process.env.DB_DATABASE || 'postgres', // 初始连接到默认数据库
       ssl: {
         rejectUnauthorized: false, // AWS RDS 需要
       },

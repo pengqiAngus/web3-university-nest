@@ -31,7 +31,7 @@ export class CourseService {
   }
 
   async findOne(
-    id: number,
+    id: string,
   ): Promise<Course & { imgUrl?: string; fileUrl?: string }> {
     const course = await this.courseRepository.findOne({ where: { id } });
     if (!course) {

@@ -49,7 +49,7 @@ export class CourseController {
   @ApiParam({ name: 'id', description: '课程ID' })
   @ApiResponse({ status: 200, description: '成功获取课程详情', type: Course })
   @Get('detail/:id')
-  async findOne(@Param('id', ParseIntPipe) id: number): Promise<Course> {
+  async findOne(@Param('id') id: string): Promise<Course> {
     return this.courseService.findOne(id);
   }
 

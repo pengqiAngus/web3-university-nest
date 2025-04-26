@@ -4,8 +4,8 @@ import { ApiProperty } from '@nestjs/swagger';
 @Entity('courses')
 export class Course {
   @ApiProperty({ description: '课程ID' })
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @ApiProperty({ description: '课程名称' })
   @Column()

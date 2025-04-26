@@ -9,12 +9,12 @@ import { config } from 'dotenv';
 config();
 
 async function bootstrap() {
-  // 初始化数据库
-  const dbService = new DatabaseService();
-  await dbService.initializeDatabase();
-
   // 创建应用实例
   const app = await NestFactory.create(AppModule);
+
+  // 初始化数据库
+  const dbService = app.get(DatabaseService);
+  await dbService.initializeDatabase();
 
   // 设置全局路由前缀
   app.setGlobalPrefix('api');
